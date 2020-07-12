@@ -1,0 +1,13 @@
+  
+name: "alex.js"
+description: "Check for insensitive wording in your repo"
+inputs:
+  arguments:  # id of input
+    description: 'Alex.js arguments'
+    required: false
+    default: ''
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.arguments }}
